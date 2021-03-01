@@ -28,5 +28,5 @@ jobs:
       - name: Run a one-line script
         run: make all
       - name: Test the new image
-        run: docker run --rm hello
+        run: docker run --rm hello:2
 
