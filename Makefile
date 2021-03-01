@@ -1,15 +1,11 @@
 CC=gcc
 
-hello: 
-	$(CC) -o hello hello.c -static 
-
 image:
-	docker image build -t hello .
+	docker image build -t hello:2 .
 
 clean:
-	docker rmi hello -f
-	rm hello
+	docker rmi hello:2 -f
 
 .PHONY : all
-all : hello image
+all : image
 
